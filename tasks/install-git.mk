@@ -26,5 +26,6 @@ endif
 	$(APT_INSTALL_COMMAND) git
 
 .PHONY: .install-git-macos
+.install-git-macos: .brew
 .install-git-macos:
 	$(BREW_INSTALL_COMMAND) git
