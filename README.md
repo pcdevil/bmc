@@ -8,11 +8,12 @@ variable for the output directory.
 
 | Task                       | Description                             |
 | -------------------------- | --------------------------------------- |
-| `help`                     | List the available tasks                |
 | `install-brew`             | Installs the [Homebrew] package manager |
 | `install-git`              | Installs the [Git] version manager      |
 | `install-oh-my-zsh`        | Installs the [Oh My Zsh] framework      |
 | `install-spaceship-prompt` | Installs the [Spaceship ZSH] prompt     |
+
+There is also a special `help` task, which lists the available tasks.
 
 ## License
 Available under the [MIT license](LICENSE.md).
