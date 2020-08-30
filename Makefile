@@ -4,6 +4,7 @@ TASKS_DIR := $(realpath ${BMC_DIR}/tasks)
 TASK_BASENAMES := \
 	install-brew \
 	install-git \
+	install-less \
 	install-rust \
 	install-shell-extensions
 TASKS_FILES := $(foreach task_basename,${TASK_BASENAMES},${TASKS_DIR}/${task_basename}.mk)
@@ -17,6 +18,10 @@ CURL_COMMAND = $(shell which curl) \
 	--location \
 	--show-error \
 	--silent
+TAR_EXTRACT_COMMAND = $(shell which tar) \
+	--extract \
+	--gzip \
+	--file
 
 default: help
 

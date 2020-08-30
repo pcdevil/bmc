@@ -14,6 +14,7 @@ defined as the destination folder.
 | -------------------------- | ---------------------------------------- |:----------------------:|
 | `install-brew`             | Installs the [Homebrew] package manager  | 🗶                      |
 | `install-git`              | Installs the [Git] version manager       | 🗶                      |
+| `install-less`             | installs the [less] pager                | ✓                      |
 | `install-oh-my-zsh`        | Installs the [Oh My Zsh] framework       | ✓                      |
 | `install-rust`             | Installs the [Rust] programming language | 🗶                      |
 | `install-rust-binaries`    | Installs Rust packages                   | 🗶                      |
@@ -27,6 +28,7 @@ Available under the [MIT license](LICENSE.md).
 [APT]: https://wiki.debian.org/Apt
 [Git]: https://git-scm.com/
 [Homebrew]: https://brew.sh/
+[less]: http://www.greenwoodsoftware.com/less/
 [Oh My Zsh]: https://github.com/ohmyzsh/ohmyzsh/
 [Rust]: https://rustup.rs/
 [Spaceship ZSH]: https://github.com/denysdovhan/spaceship-prompt
