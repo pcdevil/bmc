@@ -8,7 +8,7 @@ TASK_BASENAMES := \
 	install-shell-extensions
 TASKS_FILES := $(foreach task_basename,${TASK_BASENAMES},${TASKS_DIR}/${task_basename}.mk)
 
-APT_COMMAND = $(shell which apt)
+APT_COMMAND = sudo $(shell which apt)
 APT_INSTALL_COMMAND = $(APT_COMMAND) install
 APT_UPDATE_COMMAND = $(APT_COMMAND) update
 BASH_COMMAND = $(shell which bash)
