@@ -9,11 +9,13 @@ variable for the output directory.
 | Task                       | Description                         |
 | -------------------------- | ----------------------------------- |
 | `help`                     | List the available tasks            |
+| `install-git`              | Installs the [Git] version manager  |
 | `install-oh-my-zsh`        | Installs the [Oh My Zsh] framework  |
 | `install-spaceship-prompt` | Installs the [Spaceship ZSH] prompt |
 
 ## License
 Available under the [MIT license](LICENSE.md).
 
+[Git]: https://git-scm.com/
 [Oh My Zsh]: https://github.com/ohmyzsh/ohmyzsh/
 [Spaceship ZSH]: https://github.com/denysdovhan/spaceship-prompt
