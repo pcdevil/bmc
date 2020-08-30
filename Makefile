@@ -4,6 +4,7 @@ TASKS_DIR := $(realpath ${BMC_DIR}/tasks)
 TASK_BASENAMES := \
 	install-brew \
 	install-git \
+	install-rust \
 	install-shell-extensions
 TASKS_FILES := $(foreach task_basename,${TASK_BASENAMES},${TASKS_DIR}/${task_basename}.mk)
 
