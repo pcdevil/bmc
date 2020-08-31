@@ -6,7 +6,8 @@ TASK_BASENAMES := \
 	install-git \
 	install-less \
 	install-rust \
-	install-shell-extensions
+	install-shell-extensions \
+	set-gnome-settings
 TASKS_FILES := $(foreach task_basename,${TASK_BASENAMES},${TASKS_DIR}/${task_basename}.mk)
 
 APT_COMMAND = sudo $(shell which apt)

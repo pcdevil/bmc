@@ -19,6 +19,7 @@ defined as the destination folder.
 | `install-rust`             | Installs the [Rust] programming language | 🗶                      |
 | `install-rust-binaries`    | Installs Rust packages                   | 🗶                      |
 | `install-spaceship-prompt` | Installs the [Spaceship ZSH] prompt      | ✓                      |
+| `set-gnome-settings`       | Modifies and tweaks GNOME behaviour      | 🗶                      |
 
 There is also a special `help` task, which lists the available tasks.
 
