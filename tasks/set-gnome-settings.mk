@@ -15,6 +15,8 @@ set-gnome-settings: .set-gnome-wm-keybindings-settings
 	gsettings set org.gnome.desktop.interface enable-hot-corners true
 	gsettings set org.gnome.desktop.interface icon-theme "ubuntu-mono-dark"
 	gsettings set org.gnome.desktop.interface show-battery-percentage true
+	gsettings set org.gnome.desktop.interface enable-animations false
+	gsettings set org.gnome.desktop.peripherals.touchpad click-method "areas"
 
 .PHONY: .set-gnome-wm-keybindings-settings
 .set-gnome-wm-keybindings-settings:
