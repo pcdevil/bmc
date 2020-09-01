@@ -33,3 +33,7 @@ set-gnome-settings: .set-gnome-wm-keybindings-settings
 	gsettings set org.gnome.desktop.wm.keybindings move-to-side-w "['<Super>Left']"
 	gsettings set org.gnome.desktop.wm.keybindings cycle-group "[]"
 	gsettings set org.gnome.desktop.wm.keybindings cycle-group-backward "[]"
+
+	gsettings set org.gnome.shell.keybindings toggle-application-view "[]"
+	gsettings set org.gnome.shell.keybindings toggle-message-tray "[]"
+	gsettings set org.gnome.shell.keybindings toggle-overview "[]"
