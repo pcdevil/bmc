@@ -3,6 +3,7 @@ BMC_DIR := $(dir $(realpath ${BMC_MAKE}))
 TASKS_DIR := $(realpath ${BMC_DIR}/tasks)
 TASK_BASENAMES := \
 	install-brew \
+	install-fnm \
 	install-git \
 	install-less \
 	install-rust \

@@ -13,6 +13,7 @@ defined as the destination folder.
 | Task                       | Description                              | `TARGET_DIR` required? |
 | -------------------------- | ---------------------------------------- |:----------------------:|
 | `install-brew`             | Installs the [Homebrew] package manager  | 🗶                      |
+| `install-fnm`              | Installs the [Fast Node Manager]         | ✓                      |
 | `install-git`              | Installs the [Git] version manager       | 🗶                      |
 | `install-less`             | installs the [less] pager                | ✓                      |
 | `install-oh-my-zsh`        | Installs the [Oh My Zsh] framework       | ✓                      |
@@ -27,6 +28,7 @@ There is also a special `help` task, which lists the available tasks.
 Available under the [MIT license](LICENSE.md).
 
 [APT]: https://wiki.debian.org/Apt
+[Fast Node Manager]: https://github.com/Schniz/fnm/
 [Git]: https://git-scm.com/
 [Homebrew]: https://brew.sh/
 [less]: http://www.greenwoodsoftware.com/less/
