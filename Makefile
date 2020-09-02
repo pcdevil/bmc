@@ -4,6 +4,7 @@ TASKS_DIR := $(realpath ${BMC_DIR}/tasks)
 TASK_BASENAMES := \
 	install-brew \
 	install-fnm \
+	install-fzf \
 	install-git \
 	install-less \
 	install-rust \

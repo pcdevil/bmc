@@ -14,6 +14,7 @@ defined as the destination folder.
 | -------------------------- | ---------------------------------------- |:----------------------:|
 | `install-brew`             | Installs the [Homebrew] package manager  | 🗶                      |
 | `install-fnm`              | Installs the [Fast Node Manager]         | ✓                      |
+| `install-fzf`              | Installs the [fuzzy finder]              | ✓                      |
 | `install-git`              | Installs the [Git] version manager       | 🗶                      |
 | `install-less`             | installs the [less] pager                | ✓                      |
 | `install-oh-my-zsh`        | Installs the [Oh My Zsh] framework       | ✓                      |
@@ -29,6 +30,7 @@ Available under the [MIT license](LICENSE.md).
 
 [APT]: https://wiki.debian.org/Apt
 [Fast Node Manager]: https://github.com/Schniz/fnm/
+[fuzzy finder]: https://github.com/junegunn/fzf
 [Git]: https://git-scm.com/
 [Homebrew]: https://brew.sh/
 [less]: http://www.greenwoodsoftware.com/less/
