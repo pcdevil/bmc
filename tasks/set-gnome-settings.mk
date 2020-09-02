@@ -9,6 +9,7 @@ set-gnome-settings: .set-gnome-wm-keybindings-settings
 	gsettings set org.gnome.desktop.interface clock-show-date true
 	gsettings set org.gnome.desktop.interface clock-show-seconds true
 	gsettings set org.gnome.desktop.interface clock-show-weekday true
+	gsettings set org.gnome.desktop.calendar show-weekdate true
 
 .PHONY: .set-gnome-misc-settings
 .set-gnome-misc-settings:
