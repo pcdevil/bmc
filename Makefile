@@ -7,8 +7,9 @@ TASK_BASENAMES := \
 	install-fzf \
 	install-git \
 	install-less \
+	install-oh-my-zsh \
 	install-rust \
-	install-shell-extensions \
+	install-spaceship-prompt \
 	set-gnome-settings
 TASKS_FILES := $(foreach task_basename,${TASK_BASENAMES},${TASKS_DIR}/${task_basename}.mk)
 
