@@ -2,12 +2,14 @@ BMC_MAKE := $(firstword ${MAKEFILE_LIST})
 BMC_DIR := $(dir $(realpath ${BMC_MAKE}))
 TASKS_DIR := $(realpath ${BMC_DIR}/tasks)
 TASK_BASENAMES := \
+	install-bat \
 	install-brew \
 	install-fnm \
 	install-fzf \
 	install-git \
 	install-less \
 	install-oh-my-zsh \
+	install-ripgrep \
 	install-rust \
 	install-spaceship-prompt \
 	set-gnome-settings
