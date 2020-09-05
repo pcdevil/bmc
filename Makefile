@@ -4,7 +4,6 @@ TASKS_DIR := $(realpath ${BMC_DIR}/tasks)
 
 TASK_BASENAMES := \
 	install-bat \
-	install-brew \
 	install-fnm \
 	install-fzf \
 	install-git \
@@ -25,6 +24,7 @@ endif
 
 ifeq (${SYSTEM},Darwin)
 TASK_BASENAMES += \
+	install-brew \
 	set-macos-settings
 endif
 

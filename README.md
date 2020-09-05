@@ -7,15 +7,15 @@ feature is created as a task.
 
 | Task                          | Description                                              | [Prerequisites]             |
 | ----------------------------- | -------------------------------------------------------- | --------------------------- |
-| `install-bat`                 | Installs the [bat] file displayer                        |                             |
-| `install-brew`                | Installs the [Homebrew] package manager                  |                             |
+| `install-bat`                 | Installs the [bat] file displayer                        | Rust language               |
+| `install-brew`                | Installs the [Homebrew] package manager                  | MacOS system                |
 | `install-fnm`                 | Installs the [Fast Node Manager]                         | Target folder               |
 | `install-fzf`                 | Installs the [fuzzy finder]                              | Target folder               |
-| `install-git`                 | Installs the [Git] version manager                       |                             |
+| `install-git`                 | Installs the [Git] version manager                       | Homebrew on MacOS system    |
 | `install-less`                | installs the [less] pager                                | Target folder               |
 | `install-linux-localisations` | installs the language packs and dictionaries for [Linux] | Linux system                |
 | `install-oh-my-zsh`           | Installs the [Oh My Zsh] framework                       | Target folder               |
-| `install-ripgrep`             | Installs the [ripgrep] search tool                       |                             |
+| `install-ripgrep`             | Installs the [ripgrep] search tool                       | Rust language               |
 | `install-rust`                | Installs the [Rust] programming language                 |                             |
 | `install-spaceship-prompt`    | Installs the [Spaceship ZSH] prompt                      | Target folder               |
 | `set-gnome-settings`          | Modifies and tweaks [GNOME] behaviour                    | Linux system, GNOME desktop |
@@ -28,12 +28,14 @@ Some tasks doesn't use system-wide installations, such as [APT] or [Homebrew],
 or relies on a characteristic of the system. Below you read all these special
 behaviour modifiers.
 
-| Prerequisite     | Description                                                                              |
-| ---------------- | ---------------------------------------------------------------------------------------- |
-| GNOME desktop    | The task is only available if the desktop environment is [GNOME]                         |
-| Linux system     | The task is only available if the operating system is [Linux]                            |
-| MacOS system     | The task is only available if the operating system is [MacOS]                            |
-| Target folder    | A `TARGET_DIR` environment variable is necessary to be defined as the destination folder |
+| Prerequisite     | Description                                                                                          |
+| ---------------- | ---------------------------------------------------------------------------------------------------- |
+| GNOME desktop    | The task is only available if the desktop environment is [GNOME]                                     |
+| Homebrew         | The task invokes the `install-brew` task if the [Homebrew] package manager is not already available  |
+| Linux system     | The task is only available if the operating system is [Linux]                                        |
+| MacOS system     | The task is only available if the operating system is [MacOS]                                        |
+| Rust language    | The task invokes the `install-rust` task if the [Rust] programming language is not already available |
+| Target folder    | A `TARGET_DIR` environment variable is necessary to be defined as the destination folder             |
 
 ## License
 Available under the [MIT license](LICENSE.md).
