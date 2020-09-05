@@ -12,7 +12,8 @@ TASK_BASENAMES := \
 	install-ripgrep \
 	install-rust \
 	install-spaceship-prompt \
-	set-gnome-settings
+	set-gnome-settings \
+	set-macos-settings
 TASKS_FILES := $(foreach task_basename,${TASK_BASENAMES},${TASKS_DIR}/${task_basename}.mk)
 
 APT_COMMAND = sudo $(shell which apt)

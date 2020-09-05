@@ -23,6 +23,7 @@ defined as the destination folder.
 | `install-rust`             | Installs the [Rust] programming language | 🗶                      |
 | `install-spaceship-prompt` | Installs the [Spaceship ZSH] prompt      | ✓                      |
 | `set-gnome-settings`       | Modifies and tweaks GNOME behaviour      | 🗶                      |
+| `set-macos-settings`       | Modifies and tweaks MacOS behaviour      | 🗶                      |
 
 There is also a special `help` task, which lists the available tasks.
 
