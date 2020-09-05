@@ -8,6 +8,7 @@ TASK_BASENAMES := \
 	install-fzf \
 	install-git \
 	install-less \
+	install-linux-localisations \
 	install-oh-my-zsh \
 	install-ripgrep \
 	install-rust \
