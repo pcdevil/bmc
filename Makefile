@@ -1,6 +1,7 @@
 BMC_MAKE := $(firstword ${MAKEFILE_LIST})
 BMC_DIR := $(dir $(realpath ${BMC_MAKE}))
 TASKS_DIR := $(realpath ${BMC_DIR}/tasks)
+
 TASK_BASENAMES := \
 	install-bat \
 	install-brew \
@@ -8,13 +9,25 @@ TASK_BASENAMES := \
 	install-fzf \
 	install-git \
 	install-less \
-	install-linux-localisations \
 	install-oh-my-zsh \
 	install-ripgrep \
 	install-rust \
-	install-spaceship-prompt \
-	set-gnome-settings \
+	install-spaceship-prompt
+
+ifeq (${SYSTEM},Linux)
+	TASK_BASENAMES += \
+		install-linux-localisations
+	ifneq (,$(findstring GNOME,${XDG_CURRENT_DESKTOP}))
+	TASK_BASENAMES += \
+		set-gnome-settings
+	endif
+endif
+
+ifeq (${SYSTEM},Darwin)
+TASK_BASENAMES += \
 	set-macos-settings
+endif
+
 TASKS_FILES := $(foreach task_basename,${TASK_BASENAMES},${TASKS_DIR}/${task_basename}.mk)
 
 APT_COMMAND = sudo $(shell which apt)
