@@ -30,6 +30,7 @@ endif
 
 TASKS_FILES := $(foreach task_basename,${TASK_BASENAMES},${TASKS_DIR}/${task_basename}.mk)
 
+ADD_APT_REPOSITORY_COMMAND = $(shell which add-apt-repository)
 APT_COMMAND = sudo $(shell which apt)
 APT_INSTALL_COMMAND = $(APT_COMMAND) install
 APT_UPDATE_COMMAND = $(APT_COMMAND) update

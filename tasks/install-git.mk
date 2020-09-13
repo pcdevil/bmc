@@ -21,7 +21,7 @@ endif
 
 .PHONY: .install-git-linux
 .install-git-linux:
-	add-apt-repository ${GIT_PPA_REPO}
+	$(ADD_APT_REPOSITORY_COMMAND) ${GIT_PPA_REPO}
 	$(APT_UPDATE_COMMAND)
 	$(APT_INSTALL_COMMAND) git
 
