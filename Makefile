@@ -13,6 +13,8 @@ TASK_BASENAMES := \
 	install-rust \
 	install-spaceship-prompt
 
+SYSTEM = $(shell uname -s)
+
 ifeq (${SYSTEM},Linux)
 	TASK_BASENAMES += \
 		install-linux-localisations
