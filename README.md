@@ -9,6 +9,7 @@ feature is created as a task.
 | ----------------------------- | -------------------------------------------------------- | --------------------------- |
 | `install-bat`                 | Installs the [bat] file displayer                        | Rust language               |
 | `install-brew`                | Installs the [Homebrew] package manager                  | MacOS system                |
+| `install-docker`              | Installs the [Docker] containerisation solution          |                             |
 | `install-fnm`                 | Installs the [Fast Node Manager]                         | Target folder               |
 | `install-fzf`                 | Installs the [fuzzy finder]                              | Target folder               |
 | `install-git`                 | Installs the [Git] version manager                       | Homebrew on MacOS system    |
@@ -42,6 +43,7 @@ Available under the [MIT license](LICENSE.md).
 
 [APT]: https://wiki.debian.org/Apt
 [bat]: https://github.com/sharkdp/bat/
+[Docker]: https://docker.com/
 [Fast Node Manager]: https://github.com/Schniz/fnm/
 [fuzzy finder]: https://github.com/junegunn/fzf
 [Git]: https://git-scm.com/
