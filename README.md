@@ -9,7 +9,7 @@ feature is created as a task.
 | ----------------------------- | -------------------------------------------------------- | --------------------------- |
 | `install-bat`                 | Installs the [bat] file displayer                        | Rust language               |
 | `install-brew`                | Installs the [Homebrew] package manager                  | MacOS system                |
-| `install-docker`              | Installs the [Docker] containerisation solution          |                             |
+| `install-docker`              | Installs the [Docker] containerisation solution          | Target binary folder        |
 | `install-fnm`                 | Installs the [Fast Node Manager]                         | Target folder               |
 | `install-fzf`                 | Installs the [fuzzy finder]                              | Target folder               |
 | `install-git`                 | Installs the [Git] version manager                       | Homebrew on MacOS system    |
@@ -29,14 +29,15 @@ Some tasks doesn't use system-wide installations, such as [APT] or [Homebrew],
 or relies on a characteristic of the system. Below you read all these special
 behaviour modifiers.
 
-| Prerequisite     | Description                                                                                          |
-| ---------------- | ---------------------------------------------------------------------------------------------------- |
-| GNOME desktop    | The task is only available if the desktop environment is [GNOME]                                     |
-| Homebrew         | The task invokes the `install-brew` task if the [Homebrew] package manager is not already available  |
-| Linux system     | The task is only available if the operating system is [Linux]                                        |
-| MacOS system     | The task is only available if the operating system is [MacOS]                                        |
-| Rust language    | The task invokes the `install-rust` task if the [Rust] programming language is not already available |
-| Target folder    | A `TARGET_DIR` environment variable is necessary to be defined as the destination folder             |
+| Prerequisite         | Description                                                                                                           |
+| -------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| GNOME desktop        | The task is only available if the desktop environment is [GNOME]                                                      |
+| Homebrew             | The task invokes the `install-brew` task if the [Homebrew] package manager is not already available                   |
+| Linux system         | The task is only available if the operating system is [Linux]                                                         |
+| MacOS system         | The task is only available if the operating system is [MacOS]                                                         |
+| Rust language        | The task invokes the `install-rust` task if the [Rust] programming language is not already available                  |
+| Target binary folder | A `TARGET_BIN_DIR` environment variable is necessary to be defined as the destination folder for the executable files |
+| Target folder        | A `TARGET_DIR` environment variable is necessary to be defined as the destination folder for the application          |
 
 ## License
 Available under the [MIT license](LICENSE.md).

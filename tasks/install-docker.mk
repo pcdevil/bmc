@@ -7,15 +7,28 @@ DOCKER_APT_PACKAGES = \
 	containerd.io \
 	docker-compose
 DOCKER_INSTALLDMG_URL = https://download.docker.com/mac/stable/Docker.dmg
+DOCKER_CREDENTIAL_HELPERS_BINARY_FILE = docker-credential-${DOCKER_CREDENTIAL_HELPERS_STORE}
+DOCKER_CREDENTIAL_HELPERS_VERSION = v0.6.3
+DOCKER_CREDENTIAL_HELPERS_BINARY_URL = https://github.com/docker/docker-credential-helpers/releases/download/${DOCKER_CREDENTIAL_HELPERS_VERSION}/docker-credential-${DOCKER_CREDENTIAL_HELPERS_STORE}-${DOCKER_CREDENTIAL_HELPERS_VERSION}-amd64.tar.gz
 
 .PHONY: install-docker
 install-docker: ## installs the docker containerisation solution
 
 ifeq (${SYSTEM},Linux)
+install-docker: DOCKER_CREDENTIAL_HELPERS_STORE = secretservice
 install-docker: .install-docker-linux
 else ifeq (${SYSTEM},Darwin)
+install-docker: DOCKER_CREDENTIAL_HELPERS_STORE = osxkeychain
 install-docker: .install-docker-macos
 endif
+
+install-docker: .install-docker-credential-helpers
+
+.PHONY: .install-docker-credential-helpers
+.install-docker-credential-helpers:
+	$(CURL_COMMAND) ${DOCKER_CREDENTIAL_HELPERS_BINARY_URL} | $(TAR_EXTRACT_COMMAND) - --directory=${TEMP_DIR}
+	chmod +x ${TEMP_DIR}/${DOCKER_CREDENTIAL_HELPERS_BINARY_FILE}
+	mv ${TEMP_DIR}/${DOCKER_CREDENTIAL_HELPERS_BINARY_FILE} ${TARGET_BIN_DIR}
 
 .PHONY: .install-docker-linux
 .install-docker-linux:
