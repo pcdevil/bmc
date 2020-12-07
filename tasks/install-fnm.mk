@@ -1,4 +1,4 @@
-FNM_INSTALLSCRIPT_URL = https://github.com/Schniz/fnm/raw/master/.ci/install.sh
+FNM_INSTALLSCRIPT_URL = https://fnm.vercel.app/install
 
 .PHONY: install-fnm
 install-fnm: ## installs the fast node manager
